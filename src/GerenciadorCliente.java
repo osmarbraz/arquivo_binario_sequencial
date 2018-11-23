@@ -6,7 +6,7 @@ import java.io.RandomAccessFile;
 
 /**
  * Realiza as operações no arquivo de cliente.
- * 
+ *
  */
 public class GerenciadorCliente {
 
@@ -103,8 +103,8 @@ public class GerenciadorCliente {
     }
 
     /**
-     * Realiza o retorno dos dados não excluídos do arquivo. 
-     * 
+     * Realiza o retorno dos dados não excluídos do arquivo.
+     *
      * Retorna os dados do arquivo onde o campo chave é diferente de -1.
      *
      * @return Uma String com os dados do arquivo.
@@ -135,8 +135,8 @@ public class GerenciadorCliente {
     }
 
     /**
-     * Realiza o retorno dos dados do arquivo. 
-     * 
+     * Realiza o retorno dos dados do arquivo.
+     *
      * Retorna todos os dados do arquivo inclusive os excluídos.
      *
      * @return Uma String com os dados do arquivo.
@@ -209,7 +209,7 @@ public class GerenciadorCliente {
      *
      * @param chave Chave do registro a ser atualizado.
      * @param cliente Um cliente com os novos dados.
-     * 
+     *
      * @return Retorna verdadeiro ou falso se conseguiu atualizar o registro.
      */
     public boolean atualizarArquivo(int chave, RegistroCliente cliente) {
@@ -283,7 +283,7 @@ public class GerenciadorCliente {
      * Atribui -1 para o campo chave do registro.
      *
      * @param chave Chave do registro a ser excluído.
-     * 
+     *
      * @return Verdadeiro ou falso se conseguiu excluir logicamente o registro.
      */
     public boolean excluirLogico(int chave) {
@@ -394,7 +394,7 @@ public class GerenciadorCliente {
      * Pesquisa uma chave no arquivo retornando o registro.
      *
      * @param chave Valor chave a se pesquisado no arquivo.
-     * 
+     *
      * @return Retorna o registro encontrado no arquivo.
      */
     public RegistroCliente pesquisar(int chave) {

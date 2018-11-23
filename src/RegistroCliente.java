@@ -2,6 +2,10 @@
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
+/**
+ * Classe que realiza as operações de salvamento dos atributos cliente.
+ * 
+ */
 public class RegistroCliente extends Cliente {
 
     /**
@@ -81,11 +85,11 @@ public class RegistroCliente extends Cliente {
 
     /**
      * Escreve a palavra no arquivo através de um Buffer de String.
-     * 
+     *
      * @param arquivo Arquivo a ser gravado os dados.
      * @param palavra Palavra a ser escrita no arquivo.
      * @param tamanho Tamanho da palavra a ser escrita no arquivo.
-     * @throws IOException 
+     * @throws IOException
      */
     private void escrevePalavra(RandomAccessFile arquivo, String palavra, int tamanho) throws IOException {
         StringBuffer buffer = null;

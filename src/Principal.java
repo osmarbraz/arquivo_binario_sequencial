@@ -49,7 +49,7 @@ public class Principal {
             switch (opcao) {
                 case 1: {
                     //Chama o método leitura para retornar um cliente instanciado e preenchido
-                    RegistroCliente cliente = leitura("");                    
+                    RegistroCliente cliente = leitura("");
                     if (gerente.inserirFimArquivo(cliente) == true) {
                         JOptionPane.showMessageDialog(null, "Registro inserido com sucesso.");
                     } else {
