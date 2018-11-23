@@ -50,7 +50,7 @@ public class Principal {
                 case 1: {
                     //Chama o método leitura para retornar um cliente instanciado e preenchido
                     RegistroCliente cliente = leitura("");                    
-                    if (gerente.inserir(cliente) == true) {
+                    if (gerente.inserirFimArquivo(cliente) == true) {
                         JOptionPane.showMessageDialog(null, "Registro inserido com sucesso.");
                     } else {
                         JOptionPane.showMessageDialog(null, "Registro não foi inserido.");
@@ -63,7 +63,7 @@ public class Principal {
                     //Instancia um novo cliente com os novos dados
                     RegistroCliente cliente = leitura("Digite os dados do novo cliente");
                     //Atualiza o arquivo cliente com os dados para o código especificado
-                    if (gerente.atualizar(codigoAtualizar, cliente) == true) {
+                    if (gerente.atualizarArquivo(codigoAtualizar, cliente) == true) {
                         JOptionPane.showMessageDialog(null, "Registro " + codigoAtualizar + " atualizado com sucesso.");
                     } else {
                         JOptionPane.showMessageDialog(null, "Registro " + codigoAtualizar + " não foi atualizado.");

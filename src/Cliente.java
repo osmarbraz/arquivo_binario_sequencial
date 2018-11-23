@@ -22,6 +22,7 @@ public class Cliente {
         setIdade(idade);
     }
 
+    // Get´s e Set´s
     public void setCodigo(int codigo) {
         this.codigo = codigo;
     }

@@ -61,6 +61,14 @@ public class RegistroCliente extends Cliente {
         return new String(palavra).replace('\0', ' ');
     }
 
+    /**
+     * Escreve os dados no arquivo especificado.
+     *
+     * Recuera os dados do cliente e escreve no arquivo especificado.
+     *
+     * @param arquivo Arquivo a ser gravado os dados.
+     * @throws IOException
+     */
     public void escrita(RandomAccessFile arquivo) throws IOException {
         arquivo.writeInt(getCodigo());
         // Escreve 15 caracteres do nome no arquivo
@@ -71,24 +79,30 @@ public class RegistroCliente extends Cliente {
         arquivo.writeInt(getIdade());
     }
 
-    // Escreve a palavra no arquivo atrav�s de um Buffer de String
+    /**
+     * Escreve a palavra no arquivo através de um Buffer de String.
+     * 
+     * @param arquivo Arquivo a ser gravado os dados.
+     * @param palavra Palavra a ser escrita no arquivo.
+     * @param tamanho Tamanho da palavra a ser escrita no arquivo.
+     * @throws IOException 
+     */
     private void escrevePalavra(RandomAccessFile arquivo, String palavra, int tamanho) throws IOException {
-        StringBuffer buf = null;
+        StringBuffer buffer = null;
         if (palavra != null) {
-            buf = new StringBuffer(palavra);
+            buffer = new StringBuffer(palavra);
         } else {
-            buf = new StringBuffer(tamanho);
+            buffer = new StringBuffer(tamanho);
         }
-
         // Tamanho da String a ser gravada
-        buf.setLength(tamanho);
-        arquivo.writeChars(buf.toString());
+        buffer.setLength(tamanho);
+        arquivo.writeChars(buffer.toString());
     }
 
     /**
-     * Retorna o getTamanhoRegistro do registro de cliente.
+     * Retorna o tamanho do registro de cliente.
      *
-     * @return Um inteiro com o getTamanhoRegistro do registro do cliente.
+     * @return Um inteiro com o tamanho do registro do cliente.
      */
     public int getTamanhoRegistro() {
         // 4 código + 30 nome + 15 endereco + 8 salario + 4 idade
