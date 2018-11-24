@@ -78,13 +78,11 @@ public class Cliente {
 
     /**
      * Retorna os dados de cliente em uma String.
-     * 
+     *
      * @return Uma String com os dados.
      */
     @Override
     public String toString() {
-        return ("Código: " + getCodigo() + " \\ Nome: " + getNome()
-                + "\\ Endereço: " + getEndereco() + " \\ Salário: "
-                + getSalario() + " \\ Idade : " + getIdade());
+        return ("Código: " + getCodigo() + " \\ Nome: " + getNome() + "\\ Endereço: " + getEndereco() + " \\ Salário: " + getSalario() + " \\ Idade : " + getIdade());
     }
 }
