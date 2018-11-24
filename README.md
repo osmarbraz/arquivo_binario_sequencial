@@ -1,5 +1,4 @@
 # Manipulação Sequencial de Arquivo Binário
-<br>
 Manipulação de dados de cliente com as operações:
  - Incluir<br>
  - Atualizar<br>
