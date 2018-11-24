@@ -10,10 +10,23 @@ public class Cliente {
     private double salario;
     private int idade;
 
+    /**
+     * Construtor sem parâmetro.
+     */
     public Cliente() {
         this(0, "", "", 0.0, 0);
     }
 
+    /**
+     * Construtor com parâmetros.
+     *
+     * @param codigo Código de um cliente.
+     * @param nome Nome de um cliente.
+     * @param endereco Endereço de um cliente.
+     * @param salario Salário de um cliente.
+     * @param idade Idade de um cliente
+     * @param proximo Próximo registro de cliente.
+     */
     public Cliente(int codigo, String nome, String endereco, double salario, int idade) {
         setCodigo(codigo);
         setNome(nome);
@@ -63,6 +76,11 @@ public class Cliente {
         return idade;
     }
 
+    /**
+     * Retorna os dados de cliente em uma String.
+     * 
+     * @return Uma String com os dados.
+     */
     @Override
     public String toString() {
         return ("Código: " + getCodigo() + " \\ Nome: " + getNome()
